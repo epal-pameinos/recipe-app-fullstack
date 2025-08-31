@@ -58,7 +58,7 @@ app.use(passport.session());
 app.use(flash());
 
 // routes
-app.use("/api", mainRoutes);
+app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 
 // server listening
