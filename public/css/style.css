@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  /* Primary Text Colors */
+  --text-primary: #2c3e50; /* Dark blue-gray for main headings */
+  --text-secondary: #34495e; /* Medium gray for body text */
+  --text-light: #ecf0f1; /* Light text for dark backgrounds */
+
+  /* Accent Colors */
+  --accent-primary: #e74c3c; /* Warm red for CTAs, buttons */
+  --accent-secondary: #f39c12; /* Golden orange for highlights */
+  --accent-tertiary: #27ae60; /* Fresh green for success states */
+
+  /* Background Colors */
+  --bg-white: #ffffff; /* Pure white for cards */
+  --bg-light: #f8f9fa; /* Off-white for sections */
+  --bg-cream: #fefefe; /* Warm white alternative */
+  --bg-overlay: rgba(255, 255, 255, 0.9); /* Semi-transparent overlays */
+  --bg-overlay-dark: rgba(44, 62, 80, 0.8); /* Dark overlay for text blocks */
+
+  /* Border & Divider Colors */
+  --border-light: #e9ecef; /* Subtle borders */
+  --border-medium: #dee2e6; /* Medium borders */
+  --border-accent: #f39c12; /* Accent borders */
+
+  /* Interactive Colors */
+  --link-color: #3498db; /* Links */
+  --link-hover: #2980b9; /* Hovered links */
+  --button-primary: #e74c3c; /* Primary buttons */
+  --button-primary-hover: #c0392b; /* Hovered primary buttons */
+  --button-secondary: #95a5a6; /* Secondary buttons */
+  --button-secondary-hover: #7f8c8d; /* Hovered secondary buttons */
+}
+
+/* Text Styling Classes */
+.text-primary {
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+.text-light {
+  color: var(--text-light);
+}
+
+/* Heading Styles */
+h1 {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+body {
+  font-family: "Lora", serif;
+  position: relative;
+}
+
+/* Create pseudo-element for background with opacity */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  body::before {
+    background-attachment: scroll; /* Better performance on mobile */
+  }
+}
+
+/* Body Text */
+body,
+p,
+.body-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--button-primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--button-secondary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-overlay-dark);
+  color: var(--text-light);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+h1 > a {
+  color: var(--accent-primary);
+}
+
+h1 > a:hover {
+  color: var(--accent-secondary);
+}
+
+header,
+.devs-100 {
+  color: var(--text-secondary);
+}
+
+footer > a {
+  color: var(--accent-primary);
+}
+
+footer > a:hover {
+  color: var(--accent-secondary);
+}
